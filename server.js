@@ -17,16 +17,16 @@ app.use(bodyParser.json());
 // =============================================================
 var tables = [
     {
-        "customerName": "Penis",
+        "customerName": "Richard",
         "phoneNumber": "520-123-4567",
-        "customerEmail": "penis@pubes.com",
-        "customerID": "Penis"
+        "customerEmail": "richard@rick.com",
+        "customerID": "Rich"
     },
     {
-        "customerName": "Balls",
+        "customerName": "Tommy",
         "phoneNumber": "602-301-5251",
-        "customerEmail": "balls@nuts.com",
-        "customerID": "Balls"
+        "customerEmail": "thomas@tom.com",
+        "customerID": "Tommy"
     }
 ];
 
@@ -54,21 +54,6 @@ app.get("/view", function(req, res) {
 app.get("/api/tables", function(req, res) {
   return res.json(tables);
 });
-
-// // Displays a single character, or returns false
-// app.get("/api/tables/", function(req, res) {
-  //var chosen = req.params.character;
-// console.log(res);
-//   console.log(chosen);
-
-//   for (var i = 0; i < characters.length; i++) {
-//     if (chosen === characters[i].routeName) {
-//       return res.json(characters[i]);
-//     }
-//   }
-
-//   return res.json(false);
-// });
 
 // Create New Table Reservations - takes in JSON input
 app.post("/api/tables", function(req, res) {
